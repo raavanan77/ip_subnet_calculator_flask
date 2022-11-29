@@ -90,4 +90,4 @@ def results():
     return render_template('results.html',output = splited_res,ipwcidr = ip)
 
 if __name__ == '__main__':
-    app.run(host='https://ipflask-production.up.railway.app/',debug=True,port=443)
+    app.run(debug=True,port=5000)
