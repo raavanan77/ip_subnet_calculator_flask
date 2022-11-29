@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+    <title>IP subnet calculator</title>
+</head>
+<body>
+    <div class="form-group row">
+        <label for="detected_pitch" class="col-sm-2 col-form-label">IP address with CIDR: {% print(ipwcidr) %}</label>
+        <div class="col-sm-10" style="padding-top: 8px">
+                    {{output|safe}}
+        </div>
+    </div>
+</body>

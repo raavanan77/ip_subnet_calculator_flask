@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+    <title>IP subnet calculator</title>
+</head>
+<body>
+    <div name="textdiv" id="textd">
+        <form action="/results" method="POST">
+            <label>Enter IP/CIDR for.ex:(0.0.0.0/0):</label>
+            <input type="text" name="textinput">
+            <a href="{{ url_for('results') }}"></a><input type="submit" value="submit">
+        </form>
+    </div>
+</body>
