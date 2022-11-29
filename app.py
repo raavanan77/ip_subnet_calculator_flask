@@ -66,7 +66,7 @@ def subnet(sub):
                         rangenid = [str(x+'.'+str(start_nw_id)),str(x+'.'+str(start_nw_id))]
                     else:
                         rangenid = [str(x+'.'+str(start_nw_id)),str(x+'.'+str(start_nw_id))]
-                        
+
                     mid_cast = [int(x)+int(y) for x,y in zip(rangenid[0].split('.'),wildcardmask.split('.'))]
                     end_range_host = '.'.join(str(i) if k != 3 else str(i-1) for i,k in zip(mid_cast,range(len(mid_cast))))
                     start_nw_id += int(256/msb)
@@ -90,4 +90,4 @@ def results():
     return render_template('results.html',output = splited_res,ipwcidr = ip)
 
 if __name__ == '__main__':
-    app.run(debug=True,port=8000)
+    app.run(host='https://ipflask-production.up.railway.app/',debug=True,port=443)
