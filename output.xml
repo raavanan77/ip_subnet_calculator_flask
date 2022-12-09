@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.6 on linux)" generated="20221205 12:25:44.820" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="/home/user/Documents/flask1/testcase.robot">
+<test id="s1-t1" name="Testcase 1" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://127.0.0.1:5000</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221205 12:25:44.942" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<status status="PASS" starttime="20221205 12:25:44.941" endtime="20221205 12:25:47.620"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:textinput</arg>
+<arg>1.1.1.1/31</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221205 12:25:47.621" level="INFO">Typing text '1.1.1.1/31' into text field 'name:textinput'.</msg>
+<status status="PASS" starttime="20221205 12:25:47.620" endtime="20221205 12:25:47.707"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221205 12:25:47.708" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" starttime="20221205 12:25:47.708" endtime="20221205 12:25:47.818"/>
+</kw>
+<status status="PASS" starttime="20221205 12:25:44.940" endtime="20221205 12:25:47.818"/>
+</test>
+<status status="PASS" starttime="20221205 12:25:44.821" endtime="20221205 12:25:47.819"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

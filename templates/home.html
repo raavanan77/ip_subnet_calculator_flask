@@ -3,11 +3,31 @@
     <title>IP subnet calculator</title>
 </head>
 <body>
+    <link rel="stylesheet" href='/static/style.css' />
     <div name="textdiv" id="textd">
-        <form action="/results" method="POST">
+        <form action="/" method="POST">
             <label>Enter IP/CIDR for.ex:(0.0.0.0/0):</label>
             <input type="text" name="textinput">
-            <a href="{{ url_for('results') }}"></a><input type="submit" value="submit">
+            <input type="submit" value="submit">
         </form>
+    </div>
+    <div class="col-sm-10" style="padding-top: 8px">
+        <p style="visibility: {{ sv }};">{{ serious }}</p>
+    </div>
+    <div class="col-sm-10" style="padding-top: 8px">
+        <table class="cinfoT">
+            <tbody>
+                {% for i in output %}   
+                <tr><td style="text-align: left;">{{ i.split(':')[0] }}:</td><td style="text-align: left">{{ i.split(':')[1] }}</td></tr>  
+                {% endfor %}
+            </tbody>
+        </table>
+        <table class="cinfoT">
+            <tbody>
+                {% for x,y,z in ziploop %}
+                    <tr><td>{{ x }}</td><td>{{ y }}</td><td>{{ z }}</td></tr>  
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </body>
